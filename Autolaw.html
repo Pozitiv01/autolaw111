@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autolaw</title>
+  <link rel="stylesheet" href="lawcss.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Autolaw</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Услуги</h1>
+    <h3>авто юриста!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши услуги помогут вам</h2>
+      <span>Большой выбор всего, что может вам пригодиться</span>
+    </div>
+    <div class="text">
+    <span>Наши юристы практикуют в области защиты прав и законных интересов автовладельцев с 2005 года. За время работы накоплена обширная правоприменительная практика. В штате коллегии три автомобильных юриста, которые ранее проходили службу на должностях инспекторов исполнения административного законодательства, а также занимали руководящие должности в органах ГИБДД.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества, </h2>
+    <h4>с нами все проще</h4>
+
+    <div class="img">
+      <img src="https://o-dachnik.ru/wp-content/uploads/2022/12/sa-28.jpg">
+      <span>Восстановление водительских прав</span>
+    </div>
+    <div class="img">
+       <img src="https://avatars.mds.yandex.net/get-altay/4054675/2a00000174f4d460bde820012b941c17c7ac/XXL">
+      <span>Консультация автоюриста</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Консультация автоюриста</h5></center>
+    <form id="form_input">
+      <label for="name"> Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+      <input type="email" placeholder="Введите email" name="email" id="email"><br>
+      <label for="message">Сообщение <span>*</span></label><br>
+      <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+  <div id="faq">
+    <div >
+      <span class="title">Как будет проходит оплата?</span><br>
+      <span class="heading">1.Наличный расчет</span>
+      <p>Расчет может произведен как до оказания услуг , так и после, но не изменно одно консультация оплачивается в первую очередь, перед посещением нашего юриста</p>
+      <span class="heading">2.Безналичный расчет</span>
+      <p>После оформления услуги будет сформирован счёт на оплату, который Вы можете распечатать и оплатить. Денежные средства поступят на наш счёт в течение 2-3 часов после оплаты заказа.Оплата заказов клиентами - юридическими лицами возможна только по безналичному расчёту.Все необходимые для бухгалтерии документы (оригинал счёта на оплату, счёт-фактура, накладная) выдаются вместе с оказанной услугой.</p>
+    </div>
+    <div>
+      <span class="title">Как мы работаем?</span><br>
+        <p>1.Свяжитесь с нами</p>
+        <p>2.Заполните форму или позвоните нам по телефону</p>
+        <p>3.Получите консультацию</p>
+        <p>4.Мы доступно объясним юридически сложные вопросы. Вы всегда будете понимать, что и в какую очередь нужно делать, мы с вами на связи на протяжении всего процесса оформления документов.</p>
+        <p>5.Мы заключаем договор, в котором прописываем сроки и гарантии решения Вашего вопроса. Затем мы помогаем оформить необходимые документы. При необходимости представим Ваши интересы в суде.</p> 
+    </div>
+    <div>
+      <span class="title">Гарантии</span><br>
+      <span class="heading">1.Конфиденциальность</span>
+      <p>Федеральный закон от 28.12.2013 N 442-ФЗ (ред. от 28.04.2023) "Об основах социального обслуживания граждан в Российской Федерации"</p>
+      <span class="heading">2.Гарантия оказания услуги</span>
+      <p>"Гражданский кодекс Российской Федерации (часть вторая)" от 26.01.1996 N 14-Ф (с изм. и доп., вступ. в силу с 01.01.2022)</p>
+      <span class="heading">3.Права потребителя при оказании услуги</span>
+      <p>Федеральный закон от 07.02.1992 № 2300-1 (ред. от 29.07.2018) "О защите прав потребителей"</p>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
